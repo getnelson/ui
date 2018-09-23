@@ -14,6 +14,8 @@
   <link href="/css/material.min.css?{{ now | md5 }}" rel="stylesheet">
   <link href="/css/nelson.css?{{ now | md5 }}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Barlow:300,600|Open+Sans:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
@@ -48,7 +50,7 @@
     </nav>
   </header>
 
-  <div class="d-flex bd-highlight full-height">
+  <div class="d-flex bd-highlight full-height bg-light">
     <aside class="d-flex flex-column bd-highlight bg-dark">
       <div class="p-2 mt-3 mb-3 bd-highlight">
         <a href="#"><i class="fas fa-home"></i></a>
@@ -64,7 +66,8 @@
       </div>
     </aside>
     <main class="d-flex flex-column bd-highlight">
-      <div class="d-flex subnav flex-row navbar-light bg-white">
+      <!-- subnav -->
+<!--       <div class="d-flex subnav flex-row navbar-light bg-white">
         <div class="container-fluid">
           <nav aria-label="breadcrumb">
             <h4 class="p-0 m-0 pl-2 pt-2">Deployments</h4>
@@ -75,13 +78,206 @@
             </ol>
           </nav>
         </div>
+      </div> -->
+      <!-- e/o subnav -->
+
+      <!-- flash card row -->
+      <!-- <div class="d-flex flex-row p-4 bd-highlight">
+        <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+
+        <div class="card text-white bg-success mb-3 ml-4" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+
+        <div class="card text-white bg-danger mb-3 ml-4" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div> -->
+      <!-- e/o flash card row -->
+
+      <div class="d-flex flex-row p-4 bd-highlight">
+        <div class="card pl-4 pr-4 pb-2 pt-2 pt-0">
+          <h5 class="card-header">Recent Audit Events</h5>
+          <!-- <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          </form> -->
+          <table class="table recent-events mb-0">
+            <tbody>
+              <thead>
+                <td></td>
+                <td>Event</td>
+                <td>Details</td>
+                <td>&nbsp;</td>
+              </thead>
+              <tr>
+                <td>
+                  <span class="icon-holder bg-blue-5">
+                    <i class="fas fa-rocket"></i>
+                  </span>
+                </td>
+                <td>
+                  <h6 class="m-0">deploy:create</h6>
+                  <small>36 minutes ago</small>
+                </td>
+                <td>
+                  <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                  <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                </td>
+                <td>
+                  <span class="icon-holder bg-light">
+                    <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <span class="icon-holder bg-success">
+                    <i class="fas fa-rocket"></i>
+                  </span>
+                </td>
+                <td>
+                  <h6 class="m-0">deploy:ready</h6>
+                  <small>36 minutes ago</small>
+                </td>
+                <td>
+                  <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                  <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                </td>
+                <td>
+                  <span class="icon-holder bg-light">
+                    <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                  </span>
+                </td>
+              </tr>
+              
+
+              <tr>
+                <td>
+                  <span class="icon-holder bg-brown">
+                    <i class="fas fa-trash-alt"></i>
+                  </span>
+                </td>
+                <td>
+                  <h6 class="m-0">deploy:garbage</h6>
+                  <small>36 minutes ago</small>
+                </td>
+                <td>
+                  <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                  <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                </td>
+                <td>
+                  <span class="icon-holder bg-light">
+                    <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <span class="icon-holder bg-danger">
+                    <i class="fas fa-trash-alt"></i>
+                  </span>
+                </td>
+                <td>
+                  <h6 class="m-0">deploy:delete</h6>
+                  <small>36 minutes ago</small>
+                </td>
+                <td>
+                  <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                  <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                </td>
+                <td>
+                  <span class="icon-holder bg-light">
+                    <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <span class="icon-holder bg-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </td>
+                <td>
+                  <h6 class="m-0">deploy:failed</h6>
+                  <small>36 minutes ago</small>
+                </td>
+                <td>
+                  <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                  <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                </td>
+                <td>
+                  <span class="icon-holder bg-light">
+                    <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                  </span>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <span class="icon-holder bg-dark">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </td>
+                <td>
+                  <h6 class="m-0">release:create</h6>
+                  <small>36 minutes ago</small>
+                </td>
+                <td>
+                  <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                  <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                </td>
+                <td>
+                  <span class="icon-holder bg-light">
+                    <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                  </span>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="d-flex flex-column bd-highlight ml-4">
+          <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Primary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Primary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+<!-- 
+        <div class="card ml-4 pl-4 pr-4 pb-2 pt-2 pt-0">
+          sdfsdf
+        </div> -->
+
       </div>
 
+<!-- 
       <div class="d-flex p-4 bd-highlight">
         <div class="p-2 flex-fill bd-highlight" style="width: 400px">
           <div class="card p-4">
             <canvas class="mb-3" id="myChart" width="455" height="180"></canvas>
-            <!-- <img alt="Card image cap" class="card-img-top" src="https://via.placeholder.com/320x180"> -->
             <div class="card-body">
               <h4 class="card-title">Card title</h4>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -94,7 +290,7 @@
         </div>
         <div class="p-2 flex-fill bd-highlight">Flex item</div>
         <div class="p-2 flex-fill bd-highlight">Flex item</div>
-      </div>
+      </div> -->
     </main>
   </div>
 
@@ -104,45 +300,7 @@
   <script src="/js/material.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 
-<script>
-var ctx = document.getElementById("myChart");
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
-</script>
+
 
   </body>
 </html>
