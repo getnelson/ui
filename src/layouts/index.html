@@ -2,19 +2,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="/favicon.ico?" type="image/x-icon">
 
-    <title>Nelson &emdash; Dashboard</title>
+  <title>Nelson &emdash; Dashboard</title>
 
-    <link href="/css/material.min.css?{{ now | md5 }}" rel="stylesheet">
-    <link href="/css/nelson.css?{{ now | md5 }}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Barlow:300,600|Open+Sans:300" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="/css/material.min.css?{{ now | md5 }}" rel="stylesheet">
+  <link href="/css/nelson.css?{{ now | md5 }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300,600|Open+Sans:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
 <body>
@@ -26,37 +26,72 @@
         &nbsp;
         Nelson
       </a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blueprints</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Datacenters</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Auditing</a>
+        </li>
+      </ul>
+      <div class="mt-2 mt-md-0 pr-2">
+        <span class="pr-2">Timothy Perrett</span>
+        <img src="https://en.gravatar.com/userimage/1841805/87f83918ef8282e3d19b4aa4aef7e441.jpeg"
+             class="avatar" />
+      </div>
     </nav>
   </header>
 
   <div class="d-flex bd-highlight full-height">
     <aside class="d-flex flex-column bd-highlight bg-dark">
-      <div class="p-2 mt-2 mb-2 bd-highlight">
+      <div class="p-2 mt-3 mb-3 bd-highlight">
         <a href="#"><i class="fas fa-home"></i></a>
       </div>
-      <div class="p-2 mb-2 bd-highlight">
+      <div class="p-2 mb-3 bd-highlight">
         <a href="#"><i class="fas fa-binoculars"></i></a>
       </div>
-      <div class="p-2 bd-highlight">
+      <div class="p-2 mb-3 bd-highlight">
         <a href="#"><i class="fas fa-history"></i></a>
       </div>
-      <div class="p-2 bd-highlight">
+      <div class="p-2 mb-3 bd-highlight">
         <a href="#"><i class="fas fa-map-marked-alt"></i></a>
       </div>
     </aside>
     <main class="d-flex flex-column bd-highlight">
-      <nav class="d-flex subnav flex-row navbar-light bg-white">
-        <div class="container">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">tesxxxt</a>
-            </li>
-          </ul>
+      <div class="d-flex subnav flex-row navbar-light bg-white">
+        <div class="container-fluid">
+          <nav aria-label="breadcrumb">
+            <h4 class="p-0 m-0 pl-2 pt-2">Deployments</h4>
+            <ol class="breadcrumb p-0 pl-2">
+              <li class="breadcrumb-item blue-5"><a href="#">Home</a></li>
+              <li class="breadcrumb-item blue-5"><a href="#">Dashboard</a></li>
+              <li class="breadcrumb-item blue-5 active" aria-current="page">Recent</li>
+            </ol>
+          </nav>
         </div>
-      </nav>
+      </div>
 
-      <div class="d-flex bd-highlight">
-        <div class="p-2 flex-fill bd-highlight">Flex item</div>
+      <div class="d-flex p-4 bd-highlight">
+        <div class="p-2 flex-fill bd-highlight" style="width: 400px">
+          <div class="card p-4">
+            <canvas class="mb-3" id="myChart" width="455" height="180"></canvas>
+            <!-- <img alt="Card image cap" class="card-img-top" src="https://via.placeholder.com/320x180"> -->
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-outline-primary" href="#">Action</a>
+              <a class="btn btn-outline-primary" href="#">Action</a>
+            </div>
+          </div>
+        </div>
         <div class="p-2 flex-fill bd-highlight">Flex item</div>
         <div class="p-2 flex-fill bd-highlight">Flex item</div>
       </div>
@@ -67,6 +102,47 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
   <script src="/js/material.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
 
   </body>
 </html>

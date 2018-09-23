@@ -1,3 +1,30 @@
+/**************************** BRAND ****************************/
+
+.bg-blue-5, .bg-blue-5 h1, .bg-blue-5 h2, .bg-blue-5 h3 {
+  background-color: #448aff;
+  color: white;
+}
+.blue-5 {
+  color: #448aff;
+}
+.bg-blue-4 {
+  background-color: #47c7ff;
+}
+.blue-4 {
+  color: #47c7ff;
+}
+.bg-white {
+  background-color: white;
+}
+.bg-pink {
+  background-color: #ff4081;
+}
+.pink {
+  color: #ff4081;
+}
+
+/**************************** LAYOUT ****************************/
+
 html,body {
   height: 100%;
   margin: 0px;
@@ -20,6 +47,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Barlow', sans-serif;
 }
 
+/**************************** NAV ****************************/
+
 nav {
   font-weight: 600;
 }
@@ -28,23 +57,54 @@ nav.topbar {
   box-shadow: 0 0 20px 0 rgba(0,0,0,.14),0 3px 4px 0 rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.2)!important;
 }
 
+.avatar {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/**************************** MAIN CONTENT ****************************/
+
 main {
   width: 100%;
   padding: 0;
-  /*background-color: blue;*/
 }
 
 .subnav {
-  height: 80px;
-  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  height: 90px;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
 }
+.subnav .breadcrumb {
+  background-color: white;
+  min-height: 2.5rem;
+}
+
+.breadcrumb-item+.breadcrumb-item:before {
+  color: rgba(0,0,0,.54);
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-size: 0.2em;
+}
+
+.card-body {
+  border-top: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+/**************************** ASIDE ****************************/
 
 aside {
   font-size: 1.5em;
   padding-left: 0.6em;
   padding-right: 0.6em;
 }
-
 aside a {
   color: #99abb4;
 }
@@ -52,25 +112,3 @@ aside a:hover {
   color: #ff4081;
 }
 
-header {
-  clear: both;
-}
-
-/**************************** BRAND ****************************/
-
-.bg-blue-5, .bg-blue-5 h1, .bg-blue-5 h2, .bg-blue-5 h3 {
-  background-color: #448aff;
-  color: white;
-}
-.bg-blue-4 {
-  background-color: #47c7ff;
-}
-.bg-white {
-  background-color: white;
-}
-.bg-pink {
-  background-color: #ff4081;
-}
-.pink {
-  color: #ff4081;
-}
