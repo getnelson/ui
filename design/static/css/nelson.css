@@ -109,7 +109,7 @@ main {
 }
 
 table tr {
-  border-left: 2px solid white;  
+  border-left: 2px solid white;
 }
 table tbody tr:hover {
   border-left: 2px solid #448aff;
@@ -158,16 +158,12 @@ aside a:hover {
   background: linear-gradient(110deg, #448aff 60%, #47c7ff 60%);
 }
 
-/*.login-icon {
-  line-height: 45px;
-  color: #ffffff;
-  width: 150px;
-  height: 150px;
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 100%;
-  background: #1e88e5;
-  vertical-align: middle;
-  align-content: center;
-}*/
+.radial {
+  /*background-image: radial-gradient(ellipse farthest-side at 100% 100%,#dbf6c8 20%,#1cafc6 50%,#012690 110%);*/
+  background: rgb(71,199,255);
+  background: radial-gradient(ellipse farthest-side at 100% 100%, rgba(71,201,255,1) 51%, rgba(68,138,255,1) 100%);
+}
+
+.login .card-footer, .login .card-body, .login .card-header {
+  border: none;
+}

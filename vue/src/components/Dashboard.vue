@@ -1,0 +1,286 @@
+<template>
+  <div>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light bg-blue-5 topbar">
+        <a class="navbar-brand" href="/">
+          <img src="/img/nelson-without-background.svg?sanitize=true" width="30" height="30" class="d-inline-block align-top" alt="" />
+          &nbsp;
+          Nelson
+        </a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blueprints</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Datacenters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Auditing</a>
+          </li>
+        </ul>
+        <div class="mt-2 mt-md-0 pr-2">
+          <span class="pr-2">Timothy Perrett</span>
+          <img src="https://en.gravatar.com/userimage/1841805/87f83918ef8282e3d19b4aa4aef7e441.jpeg"
+               class="avatar" />
+        </div>
+      </nav>
+    </header>
+
+    <div class="d-flex bd-highlight full-height bg-light">
+      <aside class="d-flex flex-column bd-highlight bg-dark">
+        <div class="p-2 mt-3 mb-3 bd-highlight">
+          <a href="#"><i class="fas fa-home"></i></a>
+        </div>
+        <div class="p-2 mb-3 bd-highlight">
+          <a href="#"><i class="fas fa-binoculars"></i></a>
+        </div>
+        <div class="p-2 mb-3 bd-highlight">
+          <a href="#"><i class="fas fa-history"></i></a>
+        </div>
+        <div class="p-2 mb-3 bd-highlight">
+          <a href="#"><i class="fas fa-map-marked-alt"></i></a>
+        </div>
+      </aside>
+      <main class="d-flex flex-column bd-highlight">
+        <!-- subnav -->
+  <!--       <div class="d-flex subnav flex-row navbar-light bg-white">
+          <div class="container-fluid">
+            <nav aria-label="breadcrumb">
+              <h4 class="p-0 m-0 pl-2 pt-2">Deployments</h4>
+              <ol class="breadcrumb p-0 pl-2">
+                <li class="breadcrumb-item blue-5"><a href="#">Home</a></li>
+                <li class="breadcrumb-item blue-5"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item blue-5 active" aria-current="page">Recent</li>
+              </ol>
+            </nav>
+          </div>
+        </div> -->
+        <!-- e/o subnav -->
+
+        <!-- flash card row -->
+        <!-- <div class="d-flex flex-row p-4 bd-highlight">
+          <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Primary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card text-white bg-success mb-3 ml-4" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Primary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card text-white bg-danger mb-3 ml-4" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Primary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div> -->
+        <!-- e/o flash card row -->
+
+        <div class="d-flex flex-row p-4 bd-highlight">
+          <div class="card pl-4 pr-4 pb-2 pt-2 pt-0">
+            <h5 class="card-header">Recent Audit Events</h5>
+            <!-- <form class="form-inline my-2 my-md-0">
+              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </form> -->
+            <table class="table recent-events mb-0">
+              <tbody>
+                <thead>
+                  <td></td>
+                  <td>Event</td>
+                  <td>Details</td>
+                  <td>&nbsp;</td>
+                </thead>
+                <tr>
+                  <td>
+                    <span class="icon-holder bg-blue-5">
+                      <i class="fas fa-rocket"></i>
+                    </span>
+                  </td>
+                  <td>
+                    <h6 class="m-0">deploy:create</h6>
+                    <small>36 minutes ago</small>
+                  </td>
+                  <td>
+                    <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                    <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                  </td>
+                  <td>
+                    <span class="icon-holder bg-light">
+                      <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <span class="icon-holder bg-success">
+                      <i class="fas fa-rocket"></i>
+                    </span>
+                  </td>
+                  <td>
+                    <h6 class="m-0">deploy:ready</h6>
+                    <small>36 minutes ago</small>
+                  </td>
+                  <td>
+                    <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                    <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                  </td>
+                  <td>
+                    <span class="icon-holder bg-light">
+                      <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                    </span>
+                  </td>
+                </tr>
+                
+
+                <tr>
+                  <td>
+                    <span class="icon-holder bg-brown">
+                      <i class="fas fa-trash-alt"></i>
+                    </span>
+                  </td>
+                  <td>
+                    <h6 class="m-0">deploy:garbage</h6>
+                    <small>36 minutes ago</small>
+                  </td>
+                  <td>
+                    <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                    <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                  </td>
+                  <td>
+                    <span class="icon-holder bg-light">
+                      <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <span class="icon-holder bg-danger">
+                      <i class="fas fa-trash-alt"></i>
+                    </span>
+                  </td>
+                  <td>
+                    <h6 class="m-0">deploy:delete</h6>
+                    <small>36 minutes ago</small>
+                  </td>
+                  <td>
+                    <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                    <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                  </td>
+                  <td>
+                    <span class="icon-holder bg-light">
+                      <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <span class="icon-holder bg-warning">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                  </td>
+                  <td>
+                    <h6 class="m-0">deploy:failed</h6>
+                    <small>36 minutes ago</small>
+                  </td>
+                  <td>
+                    <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                    <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                  </td>
+                  <td>
+                    <span class="icon-holder bg-light">
+                      <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                    </span>
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <td>
+                    <span class="icon-holder bg-dark">
+                      <i class="fab fa-github"></i>
+                    </span>
+                  </td>
+                  <td>
+                    <h6 class="m-0">release:create</h6>
+                    <small>36 minutes ago</small>
+                  </td>
+                  <td>
+                    <h6 class="m-0">avdrivingreports--1-0-231--rl46uijf</h6>
+                    <small>guid = 2b997487aca4 &middot; plan = devel &middot; resources = aws, kubeapi</small>
+                  </td>
+                  <td>
+                    <span class="icon-holder bg-light">
+                      <i class="far fa-arrow-alt-circle-right dark-grey"></i>
+                    </span>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <div class="d-flex flex-column bd-highlight ml-4">
+            <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Primary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Primary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+  <!-- 
+          <div class="card ml-4 pl-4 pr-4 pb-2 pt-2 pt-0">
+            sdfsdf
+          </div> -->
+
+        </div>
+
+  <!-- 
+        <div class="d-flex p-4 bd-highlight">
+          <div class="p-2 flex-fill bd-highlight" style="width: 400px">
+            <div class="card p-4">
+              <canvas class="mb-3" id="myChart" width="455" height="180"></canvas>
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-outline-primary" href="#">Action</a>
+                <a class="btn btn-outline-primary" href="#">Action</a>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 flex-fill bd-highlight">Flex item</div>
+          <div class="p-2 flex-fill bd-highlight">Flex item</div>
+        </div> -->
+      </main>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Dashboard'
+}
+</script>
+
+<style>
+
+</style>
